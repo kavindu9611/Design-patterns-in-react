@@ -1,5 +1,10 @@
-function App() {
-  return <></>;
-}
+import "./styles.css";
+import Comp1 from "./Comp1";
 
-export default App;
+export default function App() {
+  return (
+    <div className="App">
+      <Comp1 />
+    </div>
+  );
+}
