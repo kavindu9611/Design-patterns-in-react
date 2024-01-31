@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 
 const withDimensions = (Component) => {
-  return function WithDimensions() {
+  return function WithDimensions(props) {
     const compRef = useRef();
 
     const [width, setWidth] = useState(null);
@@ -14,7 +14,7 @@ const withDimensions = (Component) => {
       }
     }, [compRef]);
 
-    return <Component ref={compRef} width={width} height={height} />;
+    return <Component ref={compRef} width={width} height={height} {...props} />;
   };
 };
 
