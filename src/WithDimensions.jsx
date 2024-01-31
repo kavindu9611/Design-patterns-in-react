@@ -1,6 +1,6 @@
 const withDimensions = (Component) => {
   return function WithDimensions() {
-    return <Component />;
+    return <Component dummyProps="some value" />;
   };
 };
 
