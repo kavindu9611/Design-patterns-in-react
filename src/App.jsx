@@ -1,10 +1,10 @@
 import "./styles.css";
-import Comp1 from "./Comp1";
+import Input from "./Input";
 
 export default function App() {
   return (
     <div className="App">
-      <Comp1 randomNumber="12345" />
+      <Input renderTextBelow={(value) => <>The value is {value}</>} />
     </div>
   );
 }
