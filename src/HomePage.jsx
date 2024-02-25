@@ -1,13 +1,6 @@
-import { useEffect, useState } from "react";
+import useOnline from "./useOnline";
 
 export default function HomePage(){
-    const [isOnline,setOnline] = useState(false)
-
-    useEffect(()=>{
-      setTimeout(()=>{
-    setOnline(true)
-      },3000)
-    },[])
-
+const isOnline = useOnline()
     return isOnline ? "I am Online" : "Not Online";
 }
