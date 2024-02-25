@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-export default function useOnline(){
+export default function useOnline(timeOut){
     const [isOnline,setOnline] = useState(false)
 
     useEffect(()=>{
       setTimeout(()=>{
     setOnline(true)
-      },3000)
+      },timeOut)
     },[])
 
     return isOnline 
